@@ -2,4 +2,4 @@
 
 <%= render 'form', post: @post %>
 
-<%= link_to 'Back', topics_path %>
+<%= link_to "Back", request.referer.present? ? request.referer : default_path %>
