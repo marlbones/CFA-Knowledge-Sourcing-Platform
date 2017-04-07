@@ -14,6 +14,17 @@
   <strong>User:</strong>
   <%= @topic.user %>
 </p>
-
+<%= link_to like_topic_path(@topic), class: "like", method: :put do %>
+    <button type="button" class="btn btn-info" aria-label="Left Align">
+    <span class="glyphicon glyphicon-thumbs-up flyphicon-align-center" aria-hidden="true"></span>
+    <span class="badge"> <%= @topic.get_upvotes.size %> </span>
+    </button>
+  <%end%>
+  <%= link_to unlike_topic_path(@topic), class: "unlike", method: :put do %>
+      <button type="button" class="btn btn-info" aria-label="Left Align">
+      <span class="glyphicon glyphicon-thumbs-down flyphicon-align-center" aria-hidden="true"></span>
+      <span class="badge"> <%= @topic.get_downvotes.size %> </span>
+      </button>
+    <%end%>
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Back', topics_path %>

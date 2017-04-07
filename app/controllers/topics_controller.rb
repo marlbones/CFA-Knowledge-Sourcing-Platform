@@ -1,10 +1,10 @@
 class TopicsController < ApplicationController
-  before_action :set_topic, only: [:show, :edit, :update, :destroy]
+  before_action :set_topic, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
 
   # GET /topics
   # GET /topics.json
   def index
-    @topics = Topic.all
+    @topics = Topic.all.order(:cached_votes_up => :desc)
   end
 
   # GET /topics/1
@@ -25,6 +25,7 @@ class TopicsController < ApplicationController
   # POST /topics.json
   def create
     @topic = Topic.new(topic_params)
+    @topic.user_id = current_user.id
 
     respond_to do |format|
       if @topic.save
@@ -59,6 +60,16 @@ class TopicsController < ApplicationController
       format.html { redirect_to topics_url, notice: 'Topic was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def upvote
+    @topic.upvote_from current_user
+    redirect_to :back
+  end
+
+  def downvote
+    @topic.downvote_from current_user
+    redirect_to :back
   end
 
   private
