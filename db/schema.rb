@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20170407050405) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -41,6 +42,16 @@ ActiveRecord::Schema.define(version: 20170407050405) do
     t.index ["cached_weighted_total"], name: "index_posts_on_cached_weighted_total", using: :btree
     t.index ["topic_id"], name: "index_posts_on_topic_id", using: :btree
     t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string   "name"
+    t.string   "resource_type"
+    t.integer  "resource_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
+    t.index ["name"], name: "index_roles_on_name", using: :btree
   end
 
   create_table "topics", force: :cascade do |t|
@@ -83,6 +94,7 @@ ActiveRecord::Schema.define(version: 20170407050405) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+
   create_table "votes", force: :cascade do |t|
     t.string   "votable_type"
     t.integer  "votable_id"
@@ -95,6 +107,11 @@ ActiveRecord::Schema.define(version: 20170407050405) do
     t.datetime "updated_at"
     t.index ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope", using: :btree
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
+
+  create_table "users_roles", id: false, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "role_id"
+    t.index ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id", using: :btree
   end
 
   add_foreign_key "posts", "topics"
