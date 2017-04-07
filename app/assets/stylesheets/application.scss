@@ -15,3 +15,7 @@
  */
   @import "bootstrap-sprockets";
   @import "bootstrap";
+
+.nav-link a:hover{
+  text-decoration: none !important;
+}
