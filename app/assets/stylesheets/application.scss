@@ -16,6 +16,20 @@
   @import "bootstrap-sprockets";
   @import "bootstrap";
 
-.nav-link a:hover{
-  text-decoration: none !important;
+
+.language-box {
+  display: inline-flex;
+  // align-items: flex-start;
+  width: 200px;
+  height: 200px;
+  background-color: tomato;
+  margin: 10px;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.languages-list {
+  font-size: 20px;
+  color: black;
 }
