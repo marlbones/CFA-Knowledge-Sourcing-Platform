@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :posts
-  resources :topics
+
+  resources :topics do
+    member do
+      resources :posts
+    end
+  end
   root 'pages#home'
 
   get 'pages/index'
