@@ -10,7 +10,7 @@ class TopicsController < ApplicationController
   # GET /topics/1
   # GET /topics/1.json
   def show
-    @posts = Post.all
+    @posts = Post.where(topic_id: params[:id])
   end
 
   # GET /topics/new
