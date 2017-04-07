@@ -20,6 +20,20 @@
         <td><%= link_to 'Show', topic %></td>
         <td><%= link_to 'Edit', edit_topic_path(topic) if current_user.admin? %></td>
         <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } if current_user.admin? %></td>
+        <td>
+          <%= link_to like_topic_path(topic), class: "like", method: :put do %>
+              <button type="button" class="btn btn-info" aria-label="Left Align">
+                <span class="glyphicon glyphicon-thumbs-up flyphicon-align-center" aria-hidden="true"></span>
+                <span class="badge"> <%= topic.get_upvotes.size %> </span>
+              </button>
+          <%end%>
+          <%= link_to unlike_topic_path(topic), class: "unlike", method: :put do %>
+              <button type="button" class="btn btn-info" aria-label="Left Align">
+                <span class="glyphicon glyphicon-thumbs-down flyphicon-align-center" aria-hidden="true"></span>
+                <span class="badge"> <%= topic.get_downvotes.size %> </span>
+              </button>
+          <%end%>
+        </td>
       </tr>
     <% end %>
   </tbody>
