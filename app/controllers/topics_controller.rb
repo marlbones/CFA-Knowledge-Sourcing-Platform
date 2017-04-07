@@ -10,7 +10,7 @@ class TopicsController < ApplicationController
   # GET /topics/1
   # GET /topics/1.json
   def show
-    @posts = Post.where(topic_id: params[:id])
+    @posts = Post.where(topic_id: params[:id]).order(:cached_votes_up => :desc)
   end
 
   # GET /topics/new
