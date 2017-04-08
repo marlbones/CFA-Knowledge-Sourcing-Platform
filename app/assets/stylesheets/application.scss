@@ -43,8 +43,32 @@
   height: 200px;
   margin-bottom: 15px;
   overflow: scroll;
+  border-radius: 6px;
+}
+
+.box-text {
+  margin-left: 1em;
 }
 
 .topic-description {
   margin-bottom: 3em;
+}
+
+.vote-buttons {
+  margin-top: 80px;
+}
+
+.edit-buttons {
+  margin-right: 1em;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+}
+
+.topic-btn {
+  text-decoration: none !important;
 }
