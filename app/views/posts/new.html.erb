@@ -2,4 +2,6 @@
 
 <%= render 'form', post: @post %>
 
-<%= link_to "Back", request.referer.present? ? request.referer : default_path %>
+<div class="back-btn">
+<%= link_to "Back", request.referer.present? ? request.referer : default_path, class: "btn btn-default" %>
+</div>
