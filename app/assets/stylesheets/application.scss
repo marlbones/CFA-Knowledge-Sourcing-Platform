@@ -45,7 +45,6 @@
 .green-background {
   text-align: center;
   padding: 50px;
-
 }
 
 .green-background h2 {
@@ -62,7 +61,7 @@
 
 .title-box {
   background-color: #EFF0F1;
-  height: 200px;
+  height: 210px;
   margin-bottom: 15px;
   overflow: scroll;
   border-radius: 6px;
@@ -71,27 +70,29 @@
 .title-box-topic {
   background-color: #EFF0F1;
   height: 130px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   border-radius: 6px;
   padding-top: 5px;
 }
-
 
 .box-text {
   margin-left: 1em;
 }
 
 .topic-description {
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 
 .topic-description-page {
   margin-bottom: 0;
 }
 
-
 .vote-buttons {
   margin-top: 80px;
+}
+
+.vote-buttons-posts {
+  margin-top: 50px;
 }
 
 .edit-buttons {

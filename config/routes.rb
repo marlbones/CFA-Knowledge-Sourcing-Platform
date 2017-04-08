@@ -6,13 +6,13 @@ Rails.application.routes.draw do
       put "unlike" => "topics#downvote"
       resources :posts do
         member do
-        put "like" => "posts#upvote"
-        put "unlike" => "posts#downvote"
+          put "like" => "posts#upvote"
+          put "unlike" => "posts#downvote"
+        end
+      end
     end
   end
-    end
-  end
-      
+
   root 'pages#home'
 
   get 'pages/index'

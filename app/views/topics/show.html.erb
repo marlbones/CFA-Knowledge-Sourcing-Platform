@@ -8,7 +8,7 @@
   <div class="row">
     <div class="container">
       <div class="col-md-2">
-        <div class="vote-buttons">
+        <div class="vote-buttons-posts">
           <%= link_to like_post_path(post), class: "like", method: :put do %>
           <button type="button" class="btn btn-info" aria-label="Left Align">
             <span class="glyphicon glyphicon-thumbs-up flyphicon-align-center" aria-hidden="true"></span>
@@ -29,7 +29,7 @@
           <li class="box-text topic-description-page">Created by <%= post.user.email %></li>
           <p class="text-right edit-buttons">
             <%= link_to 'Show', post, class: "text-right edit-buttons btn btn-primary" %>
-            <%= link_to 'Edit', edit_post_path(post) if current_user.admin? %>
+            <%= link_to 'Edit |', edit_post_path(post) if current_user.admin? %>
             <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } if current_user.admin? %>
           </p>
         </div>
