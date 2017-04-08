@@ -8,11 +8,13 @@ Our internal hackathon's theme was **education**; we were given three problems w
 2. How do you know what you don’t know if self educating?
 3. Hard to accommodate both students who are struggling and excelling in a classroom
 
+We were given a timeframe of two-days and optional weekend work.
+
 ----------
 Project
 -------------
 
-Our project evolves around the problem of "how do you know what you don't know if self educating?". To address this issue we built ***KPS : a Knowledge Sourcing Platform for self-learning developers***. KPS is a software development community which allows experienced developers to post latest trends and suggestions and self learners to explore previously unexplored areas of software development. Each user can:
+Our project revolves around the problem of "how do you know what you don't know if self educating?". To address this issue we built ***KPS : a Knowledge Sourcing Platform for self-learning developers***. KPS is a software development community which allows both experienced and new developers to create/publish articles related to latest trends, learning suggestions, and programming fundamentals. The user base then has the ability to up and downvote each article based on their importance; creating an ever evolving list of learning essentials and allowing self-learners to explore previously unexplored areas of software development. Each user can:
 > - Choose their preferred programming language;
 > - The user will be directed to an index list of capabilities which are found in that specific programming language;
 > - Each capability will contain at least one topic with detailed documentation and resources uploaded by an experienced user;
@@ -103,3 +105,25 @@ Some wire-framing ideas and which types of models and pages we would need were a
 
 ![wireframe](https://lh3.googleusercontent.com/rhL1hyBtdLlCd0Na2Q82a0tPifgA9-8_BVWVdlWodr3kCogDDNDJO4wAc1f6SmewUyDEpBo=s0 "hackathon&#40;2&#41;.jpg")
 ![models and pages](https://lh3.googleusercontent.com/-LwHwsxrHBJg/WOhzzkzOq9I/AAAAAAAAADQ/ENn_DkZRuaQ154tkb7gbSug2tF00P_NBQCLcB/s0/hackathon%25281%2529.jpg "hackathon&#40;1&#41;.jpg")
+
+Project Future
+-------------
+
+#### <i class="icon-pencil"></i> Features
+
+There are a number of features that were not implemented in the prototype build of KSP. A future version of the product might include:
+> - More functional styling;
+> - The ability for users to "favourite" articles;
+> - An in-built forum for user discussions;
+> - The ability for users to "comment" on articles;
+> - User profiles;
+> - Social media sharing;
+> - Greater admin and moderator capabilities (i.e. approving and merging articles, deleting users);
+
+#### <i class="icon-pencil"></i> Outstanding issues
+
+A number of issues present within the prototype still need to be resolved. These include:
+> - "Back" button within post/show page unresponsive after a "vote" is placed. Requires mapping to previous topic_id.;
+> - New post currently replacing topic_id with its own post_id in url upon creation;
+> - Site currently unresponsive for mobiles, ipads;
+> - Prototype built without using TDD. Greater testing required;
