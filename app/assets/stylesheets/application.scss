@@ -33,3 +33,25 @@
   font-size: 20px;
   color: black;
 }
+
+.authentication {
+  margin-top: 50px;
+  background-image: url("monitor.png");
+  // background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  // background-attachment: fixed;
+  height: 450px;
+}
+
+.green-background {
+  // background-color: green;
+  text-align: center;
+  padding: 50px;
+
+}
+
+.green-background h2 {
+  margin: 0;
+}
