@@ -1,8 +1,29 @@
 <p><%= flash[:warning] %></p>
 <p id="notice"><%= notice %></p>
 
-<h1>Topics</h1>
+<h1 class="margin-bottom text-center">Topics</h1>
 
+<div class="margin-bottom text-center">
+  <%= link_to 'Add New Topic', new_topic_path %>
+</div>
+
+<%= @topics.inspect %>
+
+<% @topics.each do |topic| %>
+<div class="row">
+  <div class="col-md-12">
+    <div class="container title-box">
+      <h3 class="margin-bottom"><%= topic.title %></h3>
+      <h4>Description</h4>
+      <li class="topic-description"><%= topic.description %></li>
+        <%= link_to 'Show', topic %>
+        <%= link_to 'Edit', edit_topic_path(topic) if current_user.admin? %>
+        <%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } if current_user.admin? %>
+    </div>
+  </div>
+</div>
+<% end %>
+<!--
 <table class="table">
   <thead>
     <tr>
@@ -39,6 +60,4 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Topic', new_topic_path %>
+<br> -->
