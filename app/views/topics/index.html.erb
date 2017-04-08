@@ -30,8 +30,8 @@
           <h4 class="box-text">Description</h4>
           <li class="box-text topic-description"><%= topic.description %></li>
           <p class="text-right edit-buttons">
-            <%= link_to 'Show', topic %>
-            <%= link_to '| Edit |', edit_topic_path(topic) if current_user.admin? %>
+            <%= link_to 'Show', topic, class: "text-right edit-buttons btn btn-primary"%>
+            <%= link_to 'Edit |', edit_topic_path(topic) if current_user.admin? %>
             <%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } if current_user.admin? %>
           </p>
         </div>
@@ -39,3 +39,5 @@
     </div>
   </div>
 <% end %>
+
+<%= link_to 'Back', root_path, class: "btn btn-default" %>
