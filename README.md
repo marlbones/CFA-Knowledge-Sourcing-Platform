@@ -12,9 +12,13 @@ Our internal hackathon's theme was **education**; we were given three problems w
 Project
 -------------
 
-Our project evolves around the problem of "how do you know what you don't know if self educating?". To address this issue we built ***KPS : a Knowledge Sourcing Platform for self-learning developers***. KPS is a platform which allows users to **********
-> - Choose their preferred programming language
-> - Be directed to an index list of capabilities which are found in that specific programming language
+Our project evolves around the problem of "how do you know what you don't know if self educating?". To address this issue we built ***KPS : a Knowledge Sourcing Platform for self-learning developers***. KPS is a software development community which allows experienced developers to post latest trends and suggestions and self learners to explore previously unexplored areas of software development. Each user can:
+> - Choose their preferred programming language;
+> - The user will be directed to an index list of capabilities which are found in that specific programming language;
+> - Each capability will contain at least one topic with detailed documentation and resources uploaded by an experienced user;
+> - Users will be encouraged to upvote or downvote the topic; the highest voted topic will be at the top of the list;
+
+Each post is reviewed by an Admin, who can edit and delete the posts.
 
 
 ----------
