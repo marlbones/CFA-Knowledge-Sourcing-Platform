@@ -56,6 +56,7 @@ Within the rails project, folder  *Gemfile* the following gems were installed:
 | rolify    | gem 'rolify'   |  authorization system  |
 | pundit     | gem 'pundit'    |  authentication system  |
 | acts as votable    | gem 'acts_as_votable'   |  acts as votable   |
+| rpsec    | gem 'rspec-rails'   |  allows testing   |
 
 #### <i class="icon-cog"></i> Gem Usage
 For full installation instructions and usage for each gem, please visit the below links which will take you to their documentation.
