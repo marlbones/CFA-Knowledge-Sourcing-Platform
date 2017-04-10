@@ -128,3 +128,11 @@ A number of issues present within the prototype still need to be resolved. These
 > - New post currently replacing topic_id with its own post_id in url upon creation;
 > - Site currently unresponsive for mobiles, ipads;
 > - Prototype built without using TDD. Greater testing required;
+
+Collaborators
+-------------
+
+[Marlon](https://github.com/marlbones)
+[Kirsten](https://github.com/kirstenfrager)
+[Aljosa](https://github.com/Al-josh)
+[Charlotte](https://github.com/charhagelin)
